@@ -1,370 +1,413 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: #EEEEEE;
-    font-family: Helvetica, Arial, sans-serif;
+h3,
+h4,
+h5 {
+  line-height: 1.3;
+}
+
+/* links */
+a {
+  text-decoration: none;
+  color: #e5f5eb;
 }
 
 a:hover {
-    color: #00ADB5;
+  color: #86efac;
 }
 
-a:visited{
-    color: #EEEEEE;
+a:visited {
+  color: #e5f5eb;
 }
 
-/* BG/Body */
-body{
-    background: #00ADB5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+body {
+  background: #022c22;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* whole Container in Grid left & right */
-.container{
-    position: relative;
-    width: 100%;
-    /* background
-    max-width: 1000px;
-    min-height: 1000px;
-    margin: 50px;
-    backround */
-    background: #EEEEEE;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* box-shadow: 0 35px 55px (#2228318f); */
+/* whole container left & right */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px 16px;
+  background: #f9fafb;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.35);
+  border-radius: 14px;
+  overflow: hidden;
 }
 
 /* left side */
-
-.container .left_side{
-    position: relative;
-    background: #222831;
-    padding: 40px;
+.container .left_side {
+  position: relative;
+  background: #031712;
+  padding: 40px;
 }
 
-/* Profile */
-.profileText{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #808080;
+/* profile */
+.profileText {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #4b5563;
 }
 
-.profileText .imgBx{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; 
-    overflow: hidden;
+.profileText .imgBx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #022c22;
 }
 
-.profileText .imgBx img{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.profileText .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.profileText h2{
-    color: #EEEEEE;
-    size: 1.5em;
-    margin-top: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 600;
-    line-height: 1.4em;
+.profileText h2 {
+  color: #e5f5eb;
+  font-size: 1.5em;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
 }
 
-.profileText h2 span{
-    font-size: 0.8em;
-    font-weight: 300;
-    color: #00ADB5;
+.profileText h2 span {
+  font-size: 0.85em;
+  font-weight: 300;
+  color: #22c55e;
 }
 
-/* Contact */
-.contactInfo{
-    padding-top: 20px;
+/* contact titles */
+.contactInfo {
+  padding-top: 24px;
 }
 
-.title{
-    color: #EEEEEE;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+.title {
+  color: #e5f5eb;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
 }
 
-.contactInfo ul{
-    position: relative;
+.contactInfo ul {
+  position: relative;
 }
 
-.contactInfo ul li{
-    position: relative;
-    list-style: none;
-    margin: 10px 0px;
-    cursor: pointer;
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px 0;
+  cursor: default;
 }
 
-.contactInfo ul li .icon{
-    display: inline-block;
-    width: 30px;
-    font-size: 18px;
-    color: #00ADB5;
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 26px;
+  font-size: 18px;
+  color: #22c55e;
 }
 
-.contactInfo ul li span{
-    font-weight: 300;
-    /* necessary maybe */
-    display: block;
-    block-size: auto;
-    /* necessary maybe */
+.contactInfo ul li span {
+  font-weight: 300;
+  display: block;
+  line-height: 1.4;
 }
 
-/* Education */
-.contactInfo.education li{
-    margin-bottom: 15px;
+.contact-list ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.contactInfo.education h5{
-    color: #00ADB5;
-    font-weight: 500;
-    margin-bottom: 15px;
+.contact-list ul li .icon {
+  width: 24px;
+  font-size: 18px;
+  flex-shrink: 0;
 }
 
-.contactInfo.education h4{
-    color: #EEEEEE;
-    font-weight: 500;
-    margin-bottom: 10px;
+.contact-list ul li .text {
+  font-weight: 300;
 }
 
-.contactInfo.education h4:nth-child(2){
-    color: #EEEEEE;
-    font-weight: 500;
+/* education */
+.contactInfo.education li {
+  margin-bottom: 18px;
 }
 
-.contactInfo.education h4{
-    color: #EEEEEE;
-    font-weight: 500;
-    margin-bottom: 10px;
+.contactInfo.education h5 {
+  color: #a3e635;
+  font-weight: 400;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
 }
 
-/* Language */
-.contactInfo.language .text{
-    color: #EEEEEE;
-    font-weight: 500;   
+.contactInfo.education h4 {
+  color: #e5f5eb;
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 1rem;
 }
 
-.contactInfo.language .percent{
-    position: relative;
-    width: 100;
-    height: 6px;
-    background: #000000;
-    display: block;
-    margin-top: 5px;
+.contactInfo.education h3 {
+  color: #e5f5eb;
+  font-weight: 400;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
 }
 
-.contactInfo.language .percent div{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #00ADB5;
+/* languages */
+.contactInfo.language .text {
+  color: #e5f5eb;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
-
-/*right side */
-
-.container .right_side{
-    position: relative;
-    background: #393E46;
-    padding: 40px;
+.contactInfo.language .percent {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: #020617;
+  display: block;
+  margin-top: 6px;
+  border-radius: 99px;
+  overflow: hidden;
 }
 
-/* Experience */
-.about{
-    margin-bottom: 50px;
+.contactInfo.language .percent div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #22c55e;
 }
 
-.about:last-child{
-    margin-bottom: 0px;
+/* right side */
+.container .right_side {
+  position: relative;
+  background: #04241c;
+  padding: 40px;
 }
 
-.title2{
-    color: #00ADB5;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+.about {
+  margin-bottom: 32px;
 }
 
-p{
-    color: #EEEEEE;
+.about:last-child {
+  margin-bottom: 0;
 }
 
-.about .box{
-    display: flex;
-    flex-direction: row;
-    margin: 20px 0;
+.title2 {
+  color: #bbf7d0;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
-.about .box .year_company{
-    min-width: 150px;
+p {
+  color: #e5f5eb;
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
-.about .box .year_company h5{
-    text-transform: uppercase;
-    color: #EEEEEE;
-    font-weight: 600;
-    padding-right: 30px;
+/* experience */
+.about .box {
+  display: flex;
+  flex-direction: row;
+  margin: 18px 0;
 }
 
-.about .box .text h4{
-    text-transform: uppercase;
-    color: #00ADB5;
-    font-size: 16px;
+.about .box .year_company {
+  min-width: 160px;
 }
 
-/* .hover{
-    color: #00ADB5;
-} */
-
-/* Skills */
-.skills .box{
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    justify-content: center;
-    align-items: center;
+.about .box .year_company h5 {
+  text-transform: uppercase;
+  color: #e5f5eb;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-right: 20px;
+  margin-bottom: 8px;
 }
 
-.skills .box h4{
-    text-transform: uppercase;
-    color: #EEEEEE;
-    font-weight: 500;
+h5.company-link {
+  color: #a3e635;
 }
 
-.skills .box .percent{
-    width: 100%;
-    height: 10px;
-    background: #222831;
+.company-link h5:hover {
+  color: #d9f99d;
 }
 
-.skills .box .percent div{
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #00ADB5;
+.about .box .text h4 {
+  text-transform: uppercase;
+  color: #22c55e;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
 }
 
-.intrest ul{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+/* skills */
+.skills .box {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  margin: 10px 0;
+  gap: 12px;
+}
+
+.skills .box h4 {
+  text-transform: uppercase;
+  color: #e5f5eb;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.skills .box .percent {
+  width: 100%;
+  height: 10px;
+  background: #020617;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.skills .box .percent div {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #22c55e;
 }
 
 /* projects */
-.projects h3{
-    color: #00ADB5;
-    padding: 10px 5px;
-    text-transform: uppercase;
-    font-weight: 500;
+.projects h3 {
+  color: #bbf7d0;
+  padding: 6px 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
-.projects p{
-    padding: 5px;
-    text-transform: uppercase;
-    font-size: small;
-    font-weight: 500;
+.projects .pro {
+  margin-bottom: 10px;
 }
 
-.btn button{
-    cursor: pointer;
+.projects p {
+  text-transform: none;
+  font-size: 0.86rem;
 }
 
-button{
-    margin: 10px;
-    font-size: xx-small;
-    font-weight: 500;
-    border: 1px solid #00ADB5;
-    border-radius: 10px;
+/* button */
+.btn {
+  margin-top: 8px;
 }
 
-button:before{
-    color: #00ADB5;
-    background: #EEEEEE;
-    border: 1px solid #00ADB5;
+.btn button {
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 8px 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid #22c55e;
+  border-radius: 999px;
+  background: transparent;
+  color: #e5f5eb;
+  cursor: pointer;
+  transition: background 0.15s ease-out, color 0.15s ease-out,
+    border-color 0.15s ease-out;
 }
 
-button:after{
-    color: #00ADB5;
-    background: #EEEEEE;
-    border: 1px solid #00ADB5;
+.btn button span {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.projects button h3:hover{
-    border-radius: 10px;
-    color: #EEEEEE;
-    background: #00ADB5;
-    border: 1px solid #EEEEEE;
+.btn button:hover {
+  background: #22c55e;
+  color: #021913;
+  border-color: #bbf7d0;
 }
 
 /* hobbies */
-.intrest{
-    margin-top: 20px;
+.intrest {
+  margin-top: 20px;
 }
 
-.intrest ul li{
-    list-style: none;
-    color: #EEEEEE;
-    font-weight: 500;
-    margin: 10px 10px;
+.intrest ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.intrest ul li .fa{
-    color: #00ADB5;
-    font-size: 18px;
-    width: 20px;
+.intrest ul li {
+  list-style: none;
+  color: #e5f5eb;
+  font-weight: 500;
+  margin: 10px 10px;
+  font-size: 0.85rem;
 }
 
-/* adj */
-@media (max-width: 1000px)
-{
-    .container{
-        margin: 10px;
-        grid-template-columns: repeat(1,1fr);
-    }
-    .intrest ul{
-        grid-template-columns: repeat(2,1fr);
-    }
+.intrest ul li .fa {
+  color: #22c55e;
+  font-size: 18px;
+  width: 20px;
 }
 
-@media (max-width: 600px)
-{
-    .about .box{
-        flex-direction: column;
-    }
-    .about .box .year_company{
-        margin-bottom: 5px;
-    }
-    .intrest ul{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .skills .box{
-        grid-template-columns: repeat(1,1fr);
-    }
+/* responsive */
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .intrest ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about .box .year_company {
+    margin-bottom: 6px;
+  }
 }
 
-/* src: YT/c/OnlineTutorials4Designers */
+@media (max-width: 600px) {
+  .container {
+    margin: 24px 10px;
+  }
+
+  .about .box {
+    flex-direction: column;
+  }
+
+  .about .box .year_company {
+    margin-bottom: 8px;
+  }
+
+  .intrest ul {
+    grid-template-columns: 1fr;
+  }
+
+  .skills .box {
+    grid-template-columns: 1fr;
+  }
+}
